@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /* ===================================================
    ГЛАВНАЯ СТРАНИЦА
    =================================================== */
 
-=======
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 /* ===== общие настройки страницы ===== */
 body {
     margin: 0;
@@ -19,24 +16,14 @@ body::before {
     content: '';
     display: block;
     height: 5px;
-<<<<<<< HEAD
     background-color: darkblue;
-=======
-    background-color: navy;
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 }
 
 /* ===== шапка ===== */
 .site-header {
-<<<<<<< HEAD
     background-color: darkblue;
     color: white;
     padding: 60px 20px;
-=======
-    background-color: navy;
-    color: white;
-    padding: 70px 0 60px;
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
     text-align: center;
 }
 
@@ -57,18 +44,13 @@ body::before {
     line-height: 58px;
     border-radius: 50%;
     background-color: white;
-<<<<<<< HEAD
     color: darkblue;
-=======
-    color: navy;
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 18px;
 }
 
 /* ===== секции ===== */
-<<<<<<< HEAD
 .section-aliceblue {
     background-color: aliceblue;
     padding: 50px 0;
@@ -77,27 +59,11 @@ body::before {
 .section-lightgreen {
     background-color: lightgreen;
     padding: 50px 0;
-=======
-.section {
-    padding: 60px 0;
-}
-
-/* цветные фоны секций */
-.section-blue {
-    background-color: aliceblue;
-}
-
-.section-mint {
-    background-color: honeydew;
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 }
 
 .section-lavender {
     background-color: lavender;
-<<<<<<< HEAD
     padding: 50px 0;
-=======
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 }
 
 /* ===== заголовки секций ===== */
@@ -107,7 +73,6 @@ body::before {
     margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
 .heading-darkblue {
     color: darkblue;
 }
@@ -117,17 +82,6 @@ body::before {
 }
 
 .heading-purple {
-=======
-.heading-blue {
-    color: navy;
-}
-
-.heading-mint {
-    color: green;
-}
-
-.heading-lavender {
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
     color: purple;
 }
 
@@ -135,11 +89,7 @@ body::before {
 .block {
     background-color: white;
     border: 2px solid black;
-<<<<<<< HEAD
     padding: 20px;
-=======
-    padding: 22px;
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
     height: 100%;
 }
 
@@ -160,11 +110,7 @@ body::before {
     margin-bottom: 0;
 }
 
-<<<<<<< HEAD
 /* цвет левой рамки карточки */
-=======
-/* цвет рамки карточки */
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 .block-blue {
     border-left: 8px solid blue;
 }
@@ -195,11 +141,7 @@ body::before {
 }
 
 .block-orange h3 {
-<<<<<<< HEAD
     color: orange;
-=======
-    color: darkorange;
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 }
 
 /* ===== списки ===== */
@@ -261,58 +203,7 @@ img.hobby {
 }
 
 img.travel {
-<<<<<<< HEAD
     height: 260px;
-=======
-    height: 320px;
-}
-
-/* ===== подвал ===== */
-.site-footer {
-    background-color: navy;
-    color: white;
-    padding: 24px 0;
-    font-size: 14px;
-}
-
-/* ===== адаптивность ===== */
-@media (max-width: 767.98px) {
-    .site-header {
-        padding: 50px 0 40px;
-    }
-
-    .site-header h1 {
-        font-size: 24px;
-    }
-
-    .site-header .logo {
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        font-size: 20px;
-    }
-
-    .section {
-        padding: 40px 0;
-    }
-
-    .section-heading {
-        font-size: 22px;
-        margin-bottom: 25px;
-    }
-
-    .block {
-        padding: 18px;
-    }
-
-    .travel {
-        height: 200px;
-    }
-
-    img.travel {
-        height: 200px;
-    }
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
 }
 
 /* ===== ссылка на другую страницу ===== */
@@ -329,7 +220,6 @@ img.travel {
 .page-link:hover {
     background-color: lightgray;
 }
-<<<<<<< HEAD
 
 /* ===== подвал ===== */
 .site-footer {
@@ -443,6 +333,4 @@ img.travel {
 /* ===== плавная прокрутка по якорям ===== */
 html {
     scroll-behavior: smooth;
-}
-=======
->>>>>>> 59349c924ff54a839cf73c80c1bade508812c5ce
+
