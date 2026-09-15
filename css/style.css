@@ -173,16 +173,9 @@ body::before {
     margin-bottom: 10px;
 }
 
-.photo {
-    height: 110px;
-}
+.img-placeholder {
+    height: 120px;
 
-.hobby {
-    height: 160px;
-}
-
-.travel {
-    height: 260px;
 }
 
 /* ===== реальные картинки ===== */
@@ -190,20 +183,9 @@ img.photo,
 img.hobby,
 img.travel {
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     margin-bottom: 10px;
-}
-
-img.photo {
-    height: 110px;
-}
-
-img.hobby {
-    height: 160px;
-}
-
-img.travel {
-    height: 260px;
 }
 
 /* ===== ссылка на другую страницу ===== */
