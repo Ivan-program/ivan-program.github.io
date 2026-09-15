@@ -1,3 +1,7 @@
+/* ===================================================
+   ГЛАВНАЯ СТРАНИЦА
+   =================================================== */
+
 /* ===== общие настройки страницы ===== */
 body {
     margin: 0;
@@ -12,14 +16,14 @@ body::before {
     content: '';
     display: block;
     height: 5px;
-    background-color: navy;
+    background-color: darkblue;
 }
 
 /* ===== шапка ===== */
 .site-header {
-    background-color: navy;
+    background-color: darkblue;
     color: white;
-    padding: 70px 0 60px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -40,28 +44,26 @@ body::before {
     line-height: 58px;
     border-radius: 50%;
     background-color: white;
-    color: navy;
+    color: darkblue;
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 18px;
 }
 
 /* ===== секции ===== */
-.section {
-    padding: 60px 0;
-}
-
-/* цветные фоны секций */
-.section-blue {
+.section-aliceblue {
     background-color: aliceblue;
+    padding: 50px 0;
 }
 
-.section-mint {
-    background-color: honeydew;
+.section-lightgreen {
+    background-color: lightgreen;
+    padding: 50px 0;
 }
 
 .section-lavender {
     background-color: lavender;
+    padding: 50px 0;
 }
 
 /* ===== заголовки секций ===== */
@@ -71,15 +73,15 @@ body::before {
     margin-bottom: 40px;
 }
 
-.heading-blue {
-    color: navy;
+.heading-darkblue {
+    color: darkblue;
 }
 
-.heading-mint {
+.heading-green {
     color: green;
 }
 
-.heading-lavender {
+.heading-purple {
     color: purple;
 }
 
@@ -87,7 +89,7 @@ body::before {
 .block {
     background-color: white;
     border: 2px solid black;
-    padding: 22px;
+    padding: 20px;
     height: 100%;
 }
 
@@ -108,7 +110,7 @@ body::before {
     margin-bottom: 0;
 }
 
-/* цвет рамки карточки */
+/* цвет левой рамки карточки */
 .block-blue {
     border-left: 8px solid blue;
 }
@@ -139,7 +141,7 @@ body::before {
 }
 
 .block-orange h3 {
-    color: darkorange;
+    color: orange;
 }
 
 /* ===== списки ===== */
@@ -201,54 +203,7 @@ img.hobby {
 }
 
 img.travel {
-    height: 320px;
-}
-
-/* ===== подвал ===== */
-.site-footer {
-    background-color: navy;
-    color: white;
-    padding: 24px 0;
-    font-size: 14px;
-}
-
-/* ===== адаптивность ===== */
-@media (max-width: 767.98px) {
-    .site-header {
-        padding: 50px 0 40px;
-    }
-
-    .site-header h1 {
-        font-size: 24px;
-    }
-
-    .site-header .logo {
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        font-size: 20px;
-    }
-
-    .section {
-        padding: 40px 0;
-    }
-
-    .section-heading {
-        font-size: 22px;
-        margin-bottom: 25px;
-    }
-
-    .block {
-        padding: 18px;
-    }
-
-    .travel {
-        height: 200px;
-    }
-
-    img.travel {
-        height: 200px;
-    }
+    height: 260px;
 }
 
 /* ===== ссылка на другую страницу ===== */
@@ -264,4 +219,118 @@ img.travel {
 
 .page-link:hover {
     background-color: lightgray;
+}
+
+/* ===== подвал ===== */
+.site-footer {
+    background-color: darkblue;
+    color: white;
+    padding: 24px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ===== адаптивность главной ===== */
+@media (max-width: 767.98px) {
+    .site-header {
+        padding: 40px 15px;
+    }
+
+    .site-header h1 {
+        font-size: 22px;
+    }
+
+    .site-header .logo {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 20px;
+    }
+
+    .section-aliceblue,
+    .section-lightgreen,
+    .section-lavender {
+        padding: 35px 0;
+    }
+
+    .section-heading {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .block {
+        padding: 15px;
+    }
+
+    .travel {
+        height: 200px;
+    }
+
+    img.travel {
+        height: 200px;
+    }
+}
+
+
+/* ===================================================
+   СТРАНИЦА С ДОМАШНИМ ЗАДАНИЕМ (hw0102.html)
+   =================================================== */
+
+/* ===== обложка доклада ===== */
+.hw-cover {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 25px auto 0;
+    border: 3px solid white;
+}
+
+/* ===== блоки кода ===== */
+.code-block {
+    background-color: lightgray;
+    border: 2px solid black;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* ===== таблица с данными ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: white;
+}
+
+.data-table th,
+.data-table td {
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: lightgray;
+}
+
+/* ===== ссылки внутри текста ===== */
+.block ul li a {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/* ===== плавная прокрутка по якорям ===== */
+html {
+    scroll-behavior: smooth;
 }

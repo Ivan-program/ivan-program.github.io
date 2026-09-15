@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB.HW.01.02 — C++20 vs C в роботах</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>C++20 vs C в роботах</h1>
+        <p class="subtitle">Битва за ресурсы, абстракции и безопасность · WEB.HW.01.02</p>
+        <img src="img/hw_01.02.jpg" alt="Обложка доклада" class="hw-cover">
+    </header>
+
+    <!-- О докладчике -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">О докладчике</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="block block-green">
+                        <h3>Арсентий Гусев</h3>
+                        <p><strong>Должность:</strong> руководитель группы сенсоров и актуаторов в Яндекс Роботикс.</p>
+                        <p><strong>Сфера:</strong> embedded-разработка, робототехника.</p>
+                        <p><strong>Опыт:</strong></p>
+                        <ul type=square>
+                            <li>Разработка и производство медицинского оборудования в Ростехе.</li>
+                            <li>Участие в проекте роботов-курьеров для Яндекс Лавки.</li>
+                            <li>Разработка роботов для Яндекса и логистики на текущем месте.</li>
+                        </ul>
+                        <p>Практический опыт — от медицины до складской логистики — лежит в основе доклада. Спикер говорит не о теории, а о решениях, которые реально работают в production-роботах на складах.</p>
+                        <p>Арсентий ведёт Telegram-канал, где рассказывает об embedded-вопросах, с которыми сталкивается сам и его коллеги.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="block block-blue">
+                        <h3>Событие</h3>
+                        <p>Конференция C++ Zero Cost Conf 2025.</p>
+                        <p>Видеозапись доклада:</p>
+                        <p><a href="https://www.youtube.com/watch?v=CvF0G-xnB94" target="_blank">youtube.com/watch?v=CvF0G-xnB94</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Главная идея -->
+    <div class="section-lightgreen">
+        <h2 class="section-heading heading-green">Главная идея</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-blue">
+                        <p>В embedded-разработке для роботов давно идёт спор: даёт ли C++ дополнительный overhead и стоит ли уходить от C. Отрасль очень инертная, поэтому этот «холивар» будет тянуться ещё много лет.</p>
+                        <p>Спикер показывает, что C++20 позволяет строить абстракции с «нулевой стоимостью» — код становится удобнее, безопаснее и быстрее в разработке, но не проигрывает C по производительности и контролю над ресурсами.</p>
+                        <p>Речь о том, что <strong>constexpr</strong>, <strong>шаблоны</strong>, <strong>RAII</strong> и <strong>концепции</strong> позволяют перенести часть работы на этап компиляции и убрать накладные расходы, которые раньше считались неизбежной платой за абстракции.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Где применяется -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">Где это применяется</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="block block-green">
+                        <h3>Продукты Яндекс Роботикс</h3>
+                        <ul type=square>
+                            <li><strong>Робот-пикер</strong> — захватывает товары, с помощью нейросети определяет, как правильно взять объект, подносит его к ридеру штрихкодов и перекладывает в другую корзину.</li>
+                            <li><strong>Робот-инвентаризатор «Спектр»</strong> — едет вдоль стеллажей, с помощью камер находит штрихкоды, повреждения упаковки, оценивает плотность заполнения полок.</li>
+                        </ul>
+                        <p><strong>Ограничения платформы:</strong> 1 МБ памяти под код и 240 КБ оперативной памяти.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="block block-purple">
+                        <h3>Архитектура робота</h3>
+                        <ul type=square>
+                            <li><strong>Robotic Management System</strong> — стратегия и тактика складских операций.</li>
+                            <li><strong>Главный CPU</strong> — телеметрия, анализ данных, обновление прошивок.</li>
+                            <li><strong>Специализированные вычислители</strong> — обработка изображений, управление двигателями.</li>
+                        </ul>
+                        <p>Код пишется и для серверов, и для платформ с GPU, и для микроконтроллеров, которые управляют сенсорами и BLDC-моторами.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Параметры оценки -->
+    <div class="section-lightgreen">
+        <h2 class="section-heading heading-green">Параметры оценки кода</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="block block-blue">
+                        <h3>Технические</h3>
+                        <ul type=square>
+                            <li><strong>Нормированный performance</strong> — производительность относительно максимума платформы.</li>
+                            <li><strong>Jitter</strong> — разброс времени отклика. Основа системы реального времени.</li>
+                            <li><strong>Объём кода и данных</strong> — память на платформе сильно ограничена.</li>
+                            <li><strong>Ошибки кэш-линии</strong> — лишние обращения к системной шине.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="block block-orange">
+                        <h3>Организационные</h3>
+                        <ul type=square>
+                            <li><strong>Скорость разработки</strong> — как быстро коллега разберётся в абстракциях.</li>
+                            <li><strong>Связанность модулей</strong> — чтобы не дублировать код.</li>
+                        </ul>
+                        <p><strong>Тренд:</strong> число ядер растёт, а производительность одного ядра — почти нет. Ускорение идёт за счёт сопроцессоров (NPU) и векторизации.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Три класса задач -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">Три класса задач</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="block block-blue">
+                        <h3>DSP</h3>
+                        <p>Цифровая обработка сигналов — буферизация, фильтрация, частотный анализ данных с датчиков.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="block block-green">
+                        <h3>RTPS</h3>
+                        <p>Real-Time Publish-Subscribe — обмен командами и телеметрией с вышестоящим API в реальном времени.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="block block-purple">
+                        <h3>GeMM</h3>
+                        <p>Матричные вычисления — планировщики траекторий, нейросетевой инференс, компьютерное зрение.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Пример 1 -->
+    <div class="section-lightgreen">
+        <h2 class="section-heading heading-green">Пример 1: табличные методы в DSP</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-blue">
+                        <h3>Что это</h3>
+                        <p>Табличные методы (LUT, look-up table) — способ заменить сложные вычисления быстрым доступом к заранее рассчитанным значениям. Аналогия — таблицы Брадиса для синусов и косинусов: значения считали вручную и записывали в книжку.</p>
+
+                        <h3>Задача</h3>
+                        <p>Есть зашумлённый сигнал с датчика. Нужно отфильтровать высокие частоты и получить гладкую кривую для управления роботом. Используется свёртка функции с фильтром — lowpass-фильтр низких частот.</p>
+
+                        <h3>В C</h3>
+                        <ul type=square>
+                            <li>Нет конструкторов — класс нужно инициализировать вручную.</li>
+                            <li>Коэффициенты фильтра берутся извне: MATLAB или скрипт.</li>
+                            <li>Для приёма данных по DMA используется глобальная структура.</li>
+                        </ul>
+
+                        <h3>В C++20</h3>
+                        <ul type=square>
+                            <li>Коэффициенты генерируются на этапе компиляции через constexpr.</li>
+                            <li>Данные попадают сразу в read-only memory.</li>
+                            <li>Фильтр оборачивается в шаблон с параметрами: размер, частота отсечения, частота сэмплирования.</li>
+                        </ul>
+
+                        <h3>Код на C++20</h3>
+                        <pre class="code-block">
+constexpr auto coeffs = make_lowpass&lt;64, 1000, 10000&gt;();
+
+template &lt;int N&gt;
+class Filter {
+    float buf[N] = {};
+public:
+    float apply(float x);
+};</pre>
+
+                        <h3>Код на C</h3>
+                        <pre class="code-block">
+const float coeffs[64] = { 0.001f, 0.002f, /* ... */ };
+
+struct Filter { float buf[64]; int i; };
+
+void filter_init(struct Filter* f) {
+    for (int i = 0; i &lt; 64; i++) f-&gt;buf[i] = 0;
+    f-&gt;i = 0;
+}</pre>
+
+                        <h3>Результат</h3>
+                        <ul type=square>
+                            <li>Ускорение примерно в 6 раз за счёт табличного метода.</li>
+                            <li>Около 2 раз быстрее по сравнению с библиотекой ETL.</li>
+                            <li>Встроенная векторизация даёт ещё 2 раза.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Пример 2 -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">Пример 2: статическое связывание</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-green">
+                        <h3>Что это</h3>
+                        <p>Статическое связывание — соединение компонентов программы на этапе компиляции, а не во время выполнения. Компилятор «вшивает» нужные вызовы напрямую, без указателей и виртуальных функций.</p>
+
+                        <h3>Зачем это в роботах</h3>
+                        <p>На микроконтроллерах почти нет динамической памяти и нет MMU. Вся память берётся из оперативной, поэтому используется статический аллокатор. Если число объектов заранее неизвестно, в C память приходится выделять вручную. В C++20 компилятор сам посчитает, сколько нужно.</p>
+
+                        <h3>Как реализовано</h3>
+                        <ul type=square>
+                            <li>Статическая модель наблюдателя на рекурсивных шаблонах.</li>
+                            <li>Единый код для хоста и микроконтроллера через DDS и Micro XRCE-DDS.</li>
+                            <li>Без вектора и массива указателей — они дороги по памяти.</li>
+                        </ul>
+
+                        <h3>Код</h3>
+                        <pre class="code-block">
+template &lt;typename... Obs&gt;
+class Subject {
+    std::tuple&lt;Obs...&gt; obs;
+public:
+    void notify(const Event&amp; e) {
+        std::apply([&amp;](auto&amp;... o){ (o.on(e), ...); }, obs);
+    }
+};</pre>
+
+                        <h3>Результат</h3>
+                        <ul type=square>
+                            <li>Ускорение в 12 раз по сравнению с C-кодом на указателях.</li>
+                            <li>Убираются вызовы по указателю и виртуализация.</li>
+                            <li>Данные можно расположить в быстрой Core Coupled Memory.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Пример 3 -->
+    <div class="section-lightgreen">
+        <h2 class="section-heading heading-green">Пример 3: матричное умножение</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-blue">
+                        <h3>Что это</h3>
+                        <p>GeMM (General Matrix Multiply) — обобщённое матричное умножение. Базовая операция для нейросетей, управления и планирования траекторий.</p>
+
+                        <h3>Термины</h3>
+                        <ul type=square>
+                            <li><strong>SIMD</strong> — одна инструкция, много данных.</li>
+                            <li><strong>NEON</strong> — SIMD для ARM.</li>
+                            <li><strong>MVE</strong> — векторное расширение для микроконтроллеров ARM.</li>
+                            <li><strong>AVX-256/512</strong> — векторные расширения Intel.</li>
+                            <li><strong>OpenMP</strong> — распараллеливание на несколько ядер.</li>
+                            <li><strong>Eigen</strong> — библиотека линейной алгебры.</li>
+                            <li><strong>Кэш-линия</strong> — минимальный блок данных, читаемый процессором.</li>
+                        </ul>
+
+                        <h3>Что видно на графиках</h3>
+                        <ul type=square>
+                            <li>Наивное умножение против поблочного, AVX-256/512 и OpenMP. Референс — Eigen.</li>
+                            <li>На размере матрицы около 2048 производительность однопоточного векторизованного умножения резко падает — кончаются линии кэша L1–L3.</li>
+                            <li>Вариант с OpenMP такого падения не испытывает — у каждого ядра свой кэш.</li>
+                        </ul>
+
+                        <h3>Код: поблочное умножение</h3>
+                        <pre class="code-block">
+void gemm(const float* A, const float* B, float* C, int N) {
+    for (int i = 0; i &lt; N; i++)
+        for (int j = 0; j &lt; N; j++)
+            for (int k = 0; k &lt; N; k++)
+                C[i*N + j] += A[i*N + k] * B[k*N + j];
+}</pre>
+
+                        <h3>Выводы</h3>
+                        <ul type=square>
+                            <li>Писать branchless-код — требование MISRA и AUTOSAR.</li>
+                            <li>Избегать системных вызовов и лишних аллокаций.</li>
+                            <li>Ориентироваться на roofline-модель.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Энергия -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">Энергия и экономика</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-purple">
+                        <p>Оптимизация нужна не ради самой оптимизации. Она влияет на экономику: в серверных вычислениях — меньше затрат на мощности, в батарейных роботах — меньше потребление энергии.</p>
+
+                        <h3>Расчёт инференса MobileNetV4</h3>
+                        <ul type=square>
+                            <li>Параметров сети: 1,8 млн</li>
+                            <li>Операций умножения и сложения: 3,7 млрд</li>
+                            <li>Скорость цикла: 10 мс</li>
+                            <li>Запусков в секунду: 100</li>
+                        </ul>
+
+                        <table class="data-table">
+                            <tr>
+                                <th>Энергия</th>
+                                <th>MobileNetV4</th>
+                                <th>MobileNetV4 + ускорители</th>
+                            </tr>
+                            <tr>
+                                <td>На умножение + сложение</td>
+                                <td>78,8 мДж</td>
+                                <td>1,06 мДж</td>
+                            </tr>
+                            <tr>
+                                <td>На чтение + запись</td>
+                                <td>55 мкДж</td>
+                                <td>211 мкДж</td>
+                            </tr>
+                            <tr>
+                                <td>Потребление, Вт·ч</td>
+                                <td>7,88</td>
+                                <td>0,128</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>Итог:</strong> экономия энергии — 61,56 раз. Энергия на чтение/запись даже немного выросла, но это с лихвой компенсируется падением энергии на сами вычисления.</p>
+
+                        <h3>Масштабирование на GPT-4</h3>
+                        <ul type=square>
+                            <li>Стоимость содержания: 83 000 000 руб.</li>
+                            <li>Экономия в год: 80 800 000 руб.</li>
+                        </ul>
+                        <p>В батарейных роботах это часы дополнительной автономной работы, в облаке — миллионы сэкономленных рублей.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чего не хватает -->
+    <div class="section-lightgreen">
+        <h2 class="section-heading heading-green">Чего не хватает в C++20</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-orange">
+                        <h3>1. Раздувание кода из-за шаблонов</h3>
+                        <p>Каждая инстанциация шаблона порождает новый код. При слишком детальной архитектуре прошивка растёт экспоненциально. Решение — ограничивать число модулей и следить за размером бинарника.</p>
+
+                        <h3>2. Отсутствие рефлексии</h3>
+                        <p>В C++20 нет встроенной рефлексии — программа не может «посмотреть на саму себя». Это мешает сериализации, логированию и обработке ошибок. Ожидается в C++26.</p>
+
+                        <h3>3. Прагма MBED</h3>
+                        <p>Её ждут, но полноценной замены пока нет. Сейчас используются внешние скрипты, вставляющие бинарные функции в HEX-формате в код.</p>
+
+                        <h3>4. Логи и принты</h3>
+                        <p>В прошивке на 2 МБ около 40% кода — это текст логов и сообщений. Решение: вынести текст ошибок в Doxygen-комментарии и внешний JSON, а в бинарнике хранить только код ошибки.</p>
+
+                        <h3>5. Обработка ошибок</h3>
+                        <p>Исключения плохо подходят для систем, которые работают непрерывно. Спикер рекомендует boost::expected — контейнер, хранящий либо значение, либо ошибку.</p>
+
+                        <h3>Код: boost::expected</h3>
+                        <pre class="code-block">
+boost::expected&lt;int, Error&gt; read_sensor() {
+    if (!sensor.ready()) return boost::unexpected(Error::NotReady);
+    return sensor.value();
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Выводы -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">Выводы</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-green">
+                        <ul type=square>
+                            <li>C++20 в embedded — инструмент для абстракций с нулевой стоимостью.</li>
+                            <li>constexpr и шаблоны переносят вычисления на этап компиляции.</li>
+                            <li>Статическое связывание даёт детерминизм и ускорение до 12 раз.</li>
+                            <li>Для GeMM важны кэш, SIMD и OpenMP.</li>
+                            <li>Оптимизация влияет на энергию: экономия до 61,56 раза на MobileNetV4 и до 80,8 млн руб. в год на GPT-4.</li>
+                            <li>C++20 не хватает рефлексии и прагмы MBED, а логи занимают до 40% прошивки.</li>
+                            <li>Для постоянных систем лучше подходит boost::expected, чем исключения.</li>
+                            <li>КИХ-фильтры предпочтительнее БИХ из-за устойчивости и аппаратной поддержки.</li>
+                            <li>Будущее — комбинация современных абстракций и понимания аппаратных ограничений.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Глоссарий -->
+    <div class="section-lightgreen">
+        <h2 class="section-heading heading-green">Глоссарий</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-blue">
+                        <ul type=square>
+                            <li><strong>Zero-cost abstractions</strong> — абстракции без накладных расходов.</li>
+                            <li><strong>RAII</strong> — управление ресурсами через конструкторы и деструкторы.</li>
+                            <li><strong>Jitter</strong> — разброс времени отклика системы.</li>
+                            <li><strong>DMA</strong> — прямой доступ к памяти без участия CPU.</li>
+                            <li><strong>MMU</strong> — модуль управления виртуальной памятью.</li>
+                            <li><strong>SIMD, NEON, MVE, AVX</strong> — векторные расширения процессоров.</li>
+                            <li><strong>OpenMP</strong> — многопоточные вычисления.</li>
+                            <li><strong>GeMM</strong> — обобщённое матричное умножение.</li>
+                            <li><strong>RTPS, DDS, Micro XRCE-DDS</strong> — протоколы обмена сообщениями.</li>
+                            <li><strong>NPU</strong> — нейронный ускоритель.</li>
+                            <li><strong>BLDC</strong> — бесколлекторный двигатель постоянного тока.</li>
+                            <li><strong>MISRA, AUTOSAR</strong> — стандарты безопасного embedded-кода.</li>
+                            <li><strong>LUT</strong> — таблица подстановки.</li>
+                            <li><strong>FIR/IIR</strong> — фильтры с конечной и бесконечной импульсной характеристикой.</li>
+                            <li><strong>boost::expected</strong> — контейнер «значение или ошибка».</li>
+                            <li><strong>Core Coupled Memory</strong> — быстрая память, похожая на кэш L1.</li>
+                            <li><strong>nano libc</strong> — облегчённая стандартная библиотека C для МК.</li>
+                            <li><strong>ETL</strong> — Embedded Template Library.</li>
+                            <li><strong>Eigen</strong> — библиотека линейной алгебры.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Навигация -->
+    <div class="section-aliceblue">
+        <h2 class="section-heading heading-darkblue">Навигация</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="block block-green">
+                        <p><a href="homeworks.html" class="page-link">К списку заданий</a></p>
+                        <p><a href="index.html" class="page-link">На главную</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>2026 · Иван · Прикладная информатика в экономике</p>
+    </footer>
+
+</body>
+</html>
