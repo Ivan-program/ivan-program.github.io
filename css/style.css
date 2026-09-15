@@ -334,3 +334,97 @@ img.travel {
 html {
     scroll-behavior: smooth;
 
+/* ===================================================
+   ДОМАШНЯЯ РАБОТА WEB.HW.03 (JavaScript)
+   =================================================== */
+
+/* ===== универсальная кнопка ===== */
+.my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px 5px 0;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    background-color: lightgray;
+}
+
+/* ===== заголовок в задании 03.01 ===== */
+#greetingHeader {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* ===== абзацы в задании 03.02 ===== */
+.text-item {
+    margin-bottom: 15px;
+}
+
+.text-block {
+    background-color: white;
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* ===== квадраты в задании 03.03 ===== */
+.squares-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+/* ===== квадрат состояний в задании 03.04 ===== */
+.box {
+    width: 120px;
+    height: 120px;
+    margin: 20px 0;
+    border: 3px solid black;
+    background-color: white;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+.box.large {
+    width: 200px;
+    height: 200px;
+}
+
+.box.small {
+    width: 80px;
+    height: 80px;
+}
+
+.box.medium {
+    width: 140px;
+    height: 140px;
+}
+
+.box.red {
+    background-color: red;
+}
+
+.box.blue {
+    background-color: blue;
+}
+
+.box.green {
+    background-color: green;
+}
