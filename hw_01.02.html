@@ -7,17 +7,31 @@
 </head>
 <body>
 
+    <!-- ============================================ -->
+    <!-- ШАПКА СТРАНИЦЫ                               -->
+    <!-- здесь меняются: главный заголовок,           -->
+    <!-- подзаголовок, обложка доклада                -->
+    <!-- ============================================ -->
     <header class="site-header">
         <h1>C++20 vs C в роботах</h1>
         <p class="subtitle">Битва за ресурсы, абстракции и безопасность · WEB.HW.01.02</p>
+        <!-- Картинка-обложка (лежит в папке img) -->
         <img src="img/hw_01.02.jpg" alt="Обложка доклада" class="hw-cover">
     </header>
 
-    <!-- О докладчике -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: О ДОКЛАДЧИКЕ (голубой фон)           -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
+
+        <!-- Заголовок секции -->
         <h2 class="section-heading heading-darkblue">О докладчике</h2>
+
         <div class="container">
             <div class="row g-4">
+
+                <!-- Левая карточка: биография спикера -->
                 <div class="col-lg-8">
                     <div class="block block-green">
                         <h3>Арсентий Гусев</h3>
@@ -33,19 +47,26 @@
                         <p>Арсентий ведёт Telegram-канал, где рассказывает об embedded-вопросах, с которыми сталкивается сам и его коллеги.</p>
                     </div>
                 </div>
+
+                <!-- Правая карточка: событие и ссылка на видео -->
                 <div class="col-lg-4">
                     <div class="block block-blue">
                         <h3>Событие</h3>
                         <p>Конференция C++ Zero Cost Conf 2025.</p>
                         <p>Видеозапись доклада:</p>
+                        <!-- Ссылка на YouTube -->
                         <p><a href="https://www.youtube.com/watch?v=CvF0G-xnB94" target="_blank">youtube.com/watch?v=CvF0G-xnB94</a></p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Главная идея -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ГЛАВНАЯ ИДЕЯ (зелёный фон)           -->
+    <!-- ============================================ -->
     <div class="section-lightgreen">
         <h2 class="section-heading heading-green">Главная идея</h2>
         <div class="container">
@@ -61,11 +82,16 @@
         </div>
     </div>
 
-    <!-- Где применяется -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ГДЕ ЭТО ПРИМЕНЯЕТСЯ (голубой фон)    -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
         <h2 class="section-heading heading-darkblue">Где это применяется</h2>
         <div class="container">
             <div class="row g-4">
+
+                <!-- Карточка: продукты Яндекс Роботикс -->
                 <div class="col-lg-6">
                     <div class="block block-green">
                         <h3>Продукты Яндекс Роботикс</h3>
@@ -76,6 +102,8 @@
                         <p><strong>Ограничения платформы:</strong> 1 МБ памяти под код и 240 КБ оперативной памяти.</p>
                     </div>
                 </div>
+
+                <!-- Карточка: архитектура робота -->
                 <div class="col-lg-6">
                     <div class="block block-purple">
                         <h3>Архитектура робота</h3>
@@ -87,15 +115,21 @@
                         <p>Код пишется и для серверов, и для платформ с GPU, и для микроконтроллеров, которые управляют сенсорами и BLDC-моторами.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Параметры оценки -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ПАРАМЕТРЫ ОЦЕНКИ КОДА (зелёный фон)  -->
+    <!-- ============================================ -->
     <div class="section-lightgreen">
         <h2 class="section-heading heading-green">Параметры оценки кода</h2>
         <div class="container">
             <div class="row g-4">
+
+                <!-- Карточка: технические параметры -->
                 <div class="col-lg-6">
                     <div class="block block-blue">
                         <h3>Технические</h3>
@@ -107,6 +141,8 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Карточка: организационные параметры -->
                 <div class="col-lg-6">
                     <div class="block block-orange">
                         <h3>Организационные</h3>
@@ -117,38 +153,54 @@
                         <p><strong>Тренд:</strong> число ядер растёт, а производительность одного ядра — почти нет. Ускорение идёт за счёт сопроцессоров (NPU) и векторизации.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Три класса задач -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ТРИ КЛАССА ЗАДАЧ (голубой фон)       -->
+    <!-- три карточки в одном ряду: DSP, RTPS, GeMM   -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
         <h2 class="section-heading heading-darkblue">Три класса задач</h2>
         <div class="container">
             <div class="row g-4">
+
+                <!-- Карточка DSP -->
                 <div class="col-lg-4 col-sm-6">
                     <div class="block block-blue">
                         <h3>DSP</h3>
                         <p>Цифровая обработка сигналов — буферизация, фильтрация, частотный анализ данных с датчиков.</p>
                     </div>
                 </div>
+
+                <!-- Карточка RTPS -->
                 <div class="col-lg-4 col-sm-6">
                     <div class="block block-green">
                         <h3>RTPS</h3>
                         <p>Real-Time Publish-Subscribe — обмен командами и телеметрией с вышестоящим API в реальном времени.</p>
                     </div>
                 </div>
+
+                <!-- Карточка GeMM -->
                 <div class="col-lg-4 col-sm-6">
                     <div class="block block-purple">
                         <h3>GeMM</h3>
                         <p>Матричные вычисления — планировщики траекторий, нейросетевой инференс, компьютерное зрение.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Пример 1 -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ПРИМЕР 1 — ТАБЛИЧНЫЕ МЕТОДЫ В DSP    -->
+    <!-- (зелёный фон)                                -->
+    <!-- ============================================ -->
     <div class="section-lightgreen">
         <h2 class="section-heading heading-green">Пример 1: табличные методы в DSP</h2>
         <div class="container">
@@ -175,6 +227,7 @@
                             <li>Фильтр оборачивается в шаблон с параметрами: размер, частота отсечения, частота сэмплирования.</li>
                         </ul>
 
+                        <!-- Блок кода: C++20 -->
                         <h3>Код на C++20</h3>
                         <pre class="code-block">
 constexpr auto coeffs = make_lowpass&lt;64, 1000, 10000&gt;();
@@ -186,6 +239,7 @@ public:
     float apply(float x);
 };</pre>
 
+                        <!-- Блок кода: C -->
                         <h3>Код на C</h3>
                         <pre class="code-block">
 const float coeffs[64] = { 0.001f, 0.002f, /* ... */ };
@@ -209,7 +263,11 @@ void filter_init(struct Filter* f) {
         </div>
     </div>
 
-    <!-- Пример 2 -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ПРИМЕР 2 — СТАТИЧЕСКОЕ СВЯЗЫВАНИЕ    -->
+    <!-- (голубой фон)                                -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
         <h2 class="section-heading heading-darkblue">Пример 2: статическое связывание</h2>
         <div class="container">
@@ -229,6 +287,7 @@ void filter_init(struct Filter* f) {
                             <li>Без вектора и массива указателей — они дороги по памяти.</li>
                         </ul>
 
+                        <!-- Блок кода -->
                         <h3>Код</h3>
                         <pre class="code-block">
 template &lt;typename... Obs&gt;
@@ -252,7 +311,11 @@ public:
         </div>
     </div>
 
-    <!-- Пример 3 -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ПРИМЕР 3 — МАТРИЧНОЕ УМНОЖЕНИЕ       -->
+    <!-- (зелёный фон)                                -->
+    <!-- ============================================ -->
     <div class="section-lightgreen">
         <h2 class="section-heading heading-green">Пример 3: матричное умножение</h2>
         <div class="container">
@@ -280,6 +343,7 @@ public:
                             <li>Вариант с OpenMP такого падения не испытывает — у каждого ядра свой кэш.</li>
                         </ul>
 
+                        <!-- Блок кода -->
                         <h3>Код: поблочное умножение</h3>
                         <pre class="code-block">
 void gemm(const float* A, const float* B, float* C, int N) {
@@ -301,7 +365,11 @@ void gemm(const float* A, const float* B, float* C, int N) {
         </div>
     </div>
 
-    <!-- Энергия -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ЭНЕРГИЯ И ЭКОНОМИКА (голубой фон)    -->
+    <!-- здесь таблица сравнения и расчёт экономии    -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
         <h2 class="section-heading heading-darkblue">Энергия и экономика</h2>
         <div class="container">
@@ -318,6 +386,7 @@ void gemm(const float* A, const float* B, float* C, int N) {
                             <li>Запусков в секунду: 100</li>
                         </ul>
 
+                        <!-- Таблица с данными по энергии -->
                         <table class="data-table">
                             <tr>
                                 <th>Энергия</th>
@@ -355,7 +424,10 @@ void gemm(const float* A, const float* B, float* C, int N) {
         </div>
     </div>
 
-    <!-- Чего не хватает -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ЧЕГО НЕ ХВАТАЕТ В C++20 (зелёный)    -->
+    <!-- ============================================ -->
     <div class="section-lightgreen">
         <h2 class="section-heading heading-green">Чего не хватает в C++20</h2>
         <div class="container">
@@ -377,6 +449,7 @@ void gemm(const float* A, const float* B, float* C, int N) {
                         <h3>5. Обработка ошибок</h3>
                         <p>Исключения плохо подходят для систем, которые работают непрерывно. Спикер рекомендует boost::expected — контейнер, хранящий либо значение, либо ошибку.</p>
 
+                        <!-- Блок кода: boost::expected -->
                         <h3>Код: boost::expected</h3>
                         <pre class="code-block">
 boost::expected&lt;int, Error&gt; read_sensor() {
@@ -389,7 +462,10 @@ boost::expected&lt;int, Error&gt; read_sensor() {
         </div>
     </div>
 
-    <!-- Выводы -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ВЫВОДЫ (голубой фон)                 -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
         <h2 class="section-heading heading-darkblue">Выводы</h2>
         <div class="container">
@@ -413,7 +489,11 @@ boost::expected&lt;int, Error&gt; read_sensor() {
         </div>
     </div>
 
-    <!-- Глоссарий -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: ГЛОССАРИЙ (зелёный фон)              -->
+    <!-- список терминов из доклада                   -->
+    <!-- ============================================ -->
     <div class="section-lightgreen">
         <h2 class="section-heading heading-green">Глоссарий</h2>
         <div class="container">
@@ -447,14 +527,20 @@ boost::expected&lt;int, Error&gt; read_sensor() {
         </div>
     </div>
 
-    <!-- Навигация -->
+
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: НАВИГАЦИЯ (голубой фон)              -->
+    <!-- здесь ссылки на другие страницы сайта        -->
+    <!-- ============================================ -->
     <div class="section-aliceblue">
         <h2 class="section-heading heading-darkblue">Навигация</h2>
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-12">
                     <div class="block block-green">
+                        <!-- Ссылка на список заданий -->
                         <p><a href="homework.html" class="page-link">К списку заданий</a></p>
+                        <!-- Ссылка на главную -->
                         <p><a href="index.html" class="page-link">На главную</a></p>
                     </div>
                 </div>
@@ -462,6 +548,11 @@ boost::expected&lt;int, Error&gt; read_sensor() {
         </div>
     </div>
 
+
+    <!-- ============================================ -->
+    <!-- ПОДВАЛ САЙТА                                 -->
+    <!-- здесь меняется текст в самом низу страницы   -->
+    <!-- ============================================ -->
     <footer class="site-footer">
         <p>2026 · Иван · Прикладная информатика в экономике</p>
     </footer>

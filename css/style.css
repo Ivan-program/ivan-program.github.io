@@ -7,8 +7,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: white;      /* цвет фона всей страницы */
+    color: black;                 /* цвет основного текста */
 }
 
 /* ===== верхняя цветная полоса ===== */
@@ -16,13 +16,13 @@ body::before {
     content: '';
     display: block;
     height: 5px;
-    background-color: darkblue;
+    background-color: darkblue;   /* ЦВЕТ ВЕРХНЕЙ ПОЛОСЫ */
 }
 
 /* ===== шапка ===== */
 .site-header {
-    background-color: darkblue;
-    color: white;
+    background-color: darkblue;   /* ФОН ШАПКИ */
+    color: white;                 /* ЦВЕТ ТЕКСТА В ШАПКЕ */
     padding: 60px 20px;
     text-align: center;
 }
@@ -43,26 +43,26 @@ body::before {
     height: 58px;
     line-height: 58px;
     border-radius: 50%;
-    background-color: white;
-    color: darkblue;
+    background-color: white;      /* ФОН КРУЖКА-ЛОГОТИПА */
+    color: darkblue;              /* ЦВЕТ БУКВЫ «И» В КРУЖКЕ */
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 18px;
 }
 
-/* ===== секции ===== */
+/* ===== секции (фоны страницы) ===== */
 .section-aliceblue {
-    background-color: aliceblue;
+    background-color: aliceblue;  /* ФОН 1-Й СЕКЦИИ (голубоватый) */
     padding: 50px 0;
 }
 
 .section-lightgreen {
-    background-color: lightgreen;
+    background-color: lightgreen; /* ФОН 2-Й СЕКЦИИ (зеленоватый) */
     padding: 50px 0;
 }
 
 .section-lavender {
-    background-color: lavender;
+    background-color: lavender;   /* ФОН 3-Й СЕКЦИИ (сиреневый) */
     padding: 50px 0;
 }
 
@@ -74,21 +74,21 @@ body::before {
 }
 
 .heading-darkblue {
-    color: darkblue;
+    color: darkblue;              /* ЦВЕТ ЗАГОЛОВКА «Обо мне» */
 }
 
 .heading-green {
-    color: green;
+    color: green;                 /* ЦВЕТ ЗАГОЛОВКА «Увлечения» */
 }
 
 .heading-purple {
-    color: purple;
+    color: purple;                /* ЦВЕТ ЗАГОЛОВКА «Путешествия» */
 }
 
 /* ===== карточки-блоки ===== */
 .block {
-    background-color: white;
-    border: 2px solid black;
+    background-color: white;      /* ФОН КАРТОЧКИ */
+    border: 2px solid black;      /* ОБЩАЯ РАМКА КАРТОЧКИ */
     padding: 20px;
     height: 100%;
 }
@@ -97,7 +97,7 @@ body::before {
     font-size: 18px;
     margin-bottom: 14px;
     padding-bottom: 8px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;   /* ЛИНИЯ ПОД ЗАГОЛОВКОМ */
 }
 
 .block p {
@@ -110,38 +110,38 @@ body::before {
     margin-bottom: 0;
 }
 
-/* цвет левой рамки карточки */
+/* --- цвет левой рамки карточки --- */
 .block-blue {
-    border-left: 8px solid blue;
+    border-left: 8px solid blue;      /* СИНЯЯ ПОЛОСА СЛЕВА */
 }
 
 .block-green {
-    border-left: 8px solid green;
+    border-left: 8px solid green;     /* ЗЕЛЁНАЯ ПОЛОСА СЛЕВА */
 }
 
 .block-purple {
-    border-left: 8px solid purple;
+    border-left: 8px solid purple;    /* ФИОЛЕТОВАЯ ПОЛОСА СЛЕВА */
 }
 
 .block-orange {
-    border-left: 8px solid orange;
+    border-left: 8px solid orange;    /* ОРАНЖЕВАЯ ПОЛОСА СЛЕВА */
 }
 
-/* цвет заголовка карточки */
+/* --- цвет заголовка внутри карточки --- */
 .block-blue h3 {
-    color: blue;
+    color: blue;                      /* ЦВЕТ ЗАГОЛОВКА СИНЕЙ КАРТОЧКИ */
 }
 
 .block-green h3 {
-    color: green;
+    color: green;                     /* ЦВЕТ ЗАГОЛОВКА ЗЕЛЁНОЙ КАРТОЧКИ */
 }
 
 .block-purple h3 {
-    color: purple;
+    color: purple;                    /* ЦВЕТ ЗАГОЛОВКА ФИОЛЕТОВОЙ КАРТОЧКИ */
 }
 
 .block-orange h3 {
-    color: orange;
+    color: orange;                    /* ЦВЕТ ЗАГОЛОВКА ОРАНЖЕВОЙ КАРТОЧКИ */
 }
 
 /* ===== списки ===== */
@@ -163,9 +163,9 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightgray;
-    border: 2px dashed gray;
-    color: dimgray;
+    background-color: lightgray;      /* ФОН ЗАГЛУШКИ ПОД ФОТО */
+    border: 2px dashed gray;          /* ПУНКТИРНАЯ РАМКА ЗАГЛУШКИ */
+    color: dimgray;                   /* ЦВЕТ ТЕКСТА ВНУТРИ ЗАГЛУШКИ */
     font-family: 'Courier New', monospace;
     font-size: 13px;
     text-align: center;
@@ -173,9 +173,16 @@ body::before {
     margin-bottom: 10px;
 }
 
-.img-placeholder {
-    height: 120px;
+.photo {
+    height: 110px;
+}
 
+.hobby {
+    height: 160px;
+}
+
+.travel {
+    height: 260px;
 }
 
 /* ===== реальные картинки ===== */
@@ -192,21 +199,21 @@ img.travel {
 .page-link {
     display: inline-block;
     padding: 10px 24px;
-    background-color: aliceblue;
-    border: 2px solid black;
-    color: black;
+    background-color: aliceblue;      /* ФОН КНОПКИ-ССЫЛКИ */
+    border: 2px solid black;          /* РАМКА КНОПКИ-ССЫЛКИ */
+    color: black;                     /* ЦВЕТ ТЕКСТА КНОПКИ-ССЫЛКИ */
     text-decoration: none;
     font-size: 16px;
 }
 
 .page-link:hover {
-    background-color: lightgray;
+    background-color: lightgray;      /* ФОН ПРИ НАВЕДЕНИИ */
 }
 
 /* ===== подвал ===== */
 .site-footer {
-    background-color: darkblue;
-    color: white;
+    background-color: darkblue;       /* ФОН ПОДВАЛА */
+    color: white;                     /* ЦВЕТ ТЕКСТА ПОДВАЛА */
     padding: 24px 0;
     font-size: 14px;
     text-align: center;
@@ -247,19 +254,11 @@ img.travel {
     .block {
         padding: 15px;
     }
-
-    .travel {
-        height: 200px;
-    }
-
-    img.travel {
-        height: 200px;
-    }
 }
 
 
 /* ===================================================
-   СТРАНИЦА С ДОМАШНИМ ЗАДАНИЕМ (hw0102.html)
+   СТРАНИЦА С ДОМАШНИМ ЗАДАНИЕМ (hw_01.02.html)
    =================================================== */
 
 /* ===== обложка доклада ===== */
@@ -269,13 +268,13 @@ img.travel {
     max-width: 700px;
     height: auto;
     margin: 25px auto 0;
-    border: 3px solid white;
+    border: 3px solid white;          /* БЕЛАЯ РАМКА ВОКРУГ ОБЛОЖКИ */
 }
 
 /* ===== блоки кода ===== */
 .code-block {
-    background-color: lightgray;
-    border: 2px solid black;
+    background-color: lightgray;      /* ФОН БЛОКА КОДА */
+    border: 2px solid black;          /* РАМКА БЛОКА КОДА */
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -291,7 +290,7 @@ img.travel {
     width: 100%;
     border-collapse: collapse;
     margin: 15px 0;
-    background-color: white;
+    background-color: white;          /* ФОН ТАБЛИЦЫ */
 }
 
 .data-table th,
@@ -303,21 +302,23 @@ img.travel {
 }
 
 .data-table th {
-    background-color: lightgray;
+    background-color: lightgray;      /* ФОН ШАПКИ ТАБЛИЦЫ */
 }
 
 /* ===== ссылки внутри текста ===== */
 .block ul li a {
-    color: darkblue;
+    color: darkblue;                  /* ЦВЕТ ССЫЛОК В СПИСКАХ */
     text-decoration: underline;
 }
 
 /* ===== плавная прокрутка по якорям ===== */
 html {
     scroll-behavior: smooth;
+}
+
 
 /* ===================================================
-   ДОМАШНЯЯ РАБОТА WEB.HW.03 (JavaScript)
+   WEB.HW.03 — Динамический контент (JS)
    =================================================== */
 
 /* ===== универсальная кнопка ===== */
@@ -325,22 +326,22 @@ html {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px 5px 5px 0;
-    background-color: white;
-    border: 2px solid black;
-    color: black;
+    background-color: white;          /* ФОН КНОПКИ */
+    border: 2px solid black;          /* РАМКА КНОПКИ */
+    color: black;                     /* ЦВЕТ ТЕКСТА КНОПКИ */
     font-size: 16px;
     cursor: pointer;
 }
 
 .my-button:hover {
-    background-color: lightgray;
+    background-color: lightgray;      /* ФОН КНОПКИ ПРИ НАВЕДЕНИИ */
 }
 
 /* ===== заголовок в задании 03.01 ===== */
 #greetingHeader {
     margin: 20px 0;
     padding: 20px;
-    background-color: white;
+    background-color: white;          /* ФОН ЗАГОЛОВКА-ПРИВЕТСТВИЯ */
     border: 2px solid black;
     text-align: center;
     font-size: 28px;
@@ -352,7 +353,7 @@ html {
 }
 
 .text-block {
-    background-color: white;
+    background-color: white;          /* ФОН АБЗАЦА */
     border: 1px solid black;
     padding: 15px;
     margin-bottom: 10px;
@@ -370,7 +371,7 @@ html {
 .square {
     width: 100px;
     height: 100px;
-    background-color: white;
+    background-color: white;          /* ИЗНАЧАЛЬНЫЙ ФОН КВАДРАТА */
     border: 3px solid black;
 }
 
@@ -380,7 +381,7 @@ html {
     height: 120px;
     margin: 20px 0;
     border: 3px solid black;
-    background-color: white;
+    background-color: white;          /* ИЗНАЧАЛЬНЫЙ ФОН */
     transition: width 0.3s, height 0.3s, background-color 0.3s;
 }
 
@@ -400,13 +401,291 @@ html {
 }
 
 .box.red {
-    background-color: red;
+    background-color: red;            /* ЦВЕТ БОЛЬШОГО КВАДРАТА */
 }
 
 .box.blue {
-    background-color: blue;
+    background-color: blue;           /* ЦВЕТ МАЛЕНЬКОГО КВАДРАТА */
 }
 
 .box.green {
-    background-color: green;
+    background-color: green;          /* ЦВЕТ СРЕДНЕГО КВАДРАТА */
+}
+
+
+/* ===================================================
+   WEB.HW.04.01 — Аккордеон
+   =================================================== */
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightgray;      /* ФОН ЗАГОЛОВКА РАЗДЕЛА */
+    border: 2px solid black;
+    padding: 12px 16px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.title:hover {
+    background-color: darkgray;       /* ФОН ЗАГОЛОВКА ПРИ НАВЕДЕНИИ */
+}
+
+.myText {
+    display: none;
+    background-color: white;          /* ФОН СОДЕРЖИМОГО РАЗДЕЛА */
+    border: 2px solid black;
+    border-top: none;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.myText.active {
+    display: block;
+}
+
+
+/* ===================================================
+   WEB.HW.04.02 — Голосование
+   =================================================== */
+
+#message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#addFriend {
+    padding: 8px 12px;
+    border: 2px solid black;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#addNew {
+    padding: 8px 16px;
+    border: 2px solid black;
+    background-color: white;          /* ФОН КНОПКИ «ДОБАВИТЬ» */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addNew:hover {
+    background-color: lightgray;      /* ФОН КНОПКИ ПРИ НАВЕДЕНИИ */
+}
+
+#output {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;          /* ФОН ТАБЛИЦЫ */
+}
+
+#output td {
+    border: 2px solid black;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: left;
+}
+
+#output tr {
+    cursor: pointer;
+}
+
+#output tr:hover {
+    background-color: aliceblue;      /* ФОН СТРОКИ ПРИ НАВЕДЕНИИ */
+}
+
+
+/* ===================================================
+   WEB.HW.04.03 — Виселица
+   =================================================== */
+
+.gameArea {
+    text-align: center;
+    font-size: 24px;
+}
+
+.gameArea .score {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.gameArea .box {
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px;
+    margin: 3px;
+    border-bottom: 3px solid black;   /* ЛИНИЯ ПОД БУКВОЙ СЛОВА */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.gameArea .letters {
+    margin-top: 20px;
+}
+
+.gameArea .boxE {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: white;          /* ФОН КНОПКИ-БУКВЫ */
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.gameArea .boxE:hover {
+    background-color: aliceblue;      /* ФОН КНОПКИ ПРИ НАВЕДЕНИИ */
+}
+
+.gameArea .used {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 3px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: darkgray;       /* ФОН ИСПОЛЬЗОВАННОЙ БУКВЫ */
+    color: white;                     /* ЦВЕТ ТЕКСТА ИСПОЛЬЗОВАННОЙ БУКВЫ */
+    vertical-align: middle;
+}
+
+
+/* ===================================================
+   WEB.HW.05.01 — Аналитика кликов
+   =================================================== */
+
+.track-container {
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.track-container .box {
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    padding: 20px;
+    background-color: aliceblue;      /* ФОН КВАДРАТА ДЛЯ КЛИКА */
+    border: 2px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.track-container .box:hover {
+    background-color: lightgray;      /* ФОН КВАДРАТА ПРИ НАВЕДЕНИИ */
+}
+
+.track-output {
+    background-color: white;          /* ФОН ЖУРНАЛА КЛИКОВ */
+    border: 2px solid black;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    min-height: 60px;
+}
+
+.track-output p {
+    margin: 5px 0;
+}
+
+
+/* ===================================================
+   WEB.HW.05.02 — Звёздный рейтинг
+   =================================================== */
+
+.stars {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 40px;
+    color: lightgray;                 /* ЦВЕТ ПУСТОЙ ЗВЕЗДЫ */
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.star:hover {
+    color: gold;                      /* ЦВЕТ ЗВЕЗДЫ ПРИ НАВЕДЕНИИ */
+}
+
+.star.orange {
+    color: orange;                    /* ЦВЕТ АКТИВНОЙ ЗВЕЗДЫ */
+}
+
+.output {
+    background-color: lightgray;      /* ФОН СТРОКИ С ОЦЕНКОЙ */
+    border: 2px solid black;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    min-height: 45px;
+}
+
+
+/* ===================================================
+   WEB.HW.05.03 — Отслеживание мыши
+   =================================================== */
+
+.track-area {
+    width: 400px;
+    max-width: 100%;
+    height: 300px;
+    background-color: lightgray;      /* ФОН ОБЛАСТИ СЛЕЖЕНИЯ */
+    border: 2px solid black;
+    margin: 20px auto;
+}
+
+.track-area.active {
+    background-color: red;            /* ФОН ОБЛАСТИ, КОГДА МЫШЬ ВНУТРИ */
+}
+
+.coords-output {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    min-height: 30px;
+}
+
+
+/* ===================================================
+   WEB.HW.05.04 — Игра на скорость
+   =================================================== */
+
+.game-output {
+    width: 500px;
+    max-width: 100%;
+    height: 500px;
+    border: 2px solid black;
+    margin: 20px auto;
+    position: relative;
+    background-color: white;          /* ФОН ИГРОВОГО ПОЛЯ */
+}
+
+.game-box {
+    width: 50px;
+    height: 50px;
+    background-color: red;            /* ЦВЕТ КВАДРАТА ДЛЯ КЛИКА */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.game-message {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }

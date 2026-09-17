@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WEB.HW.03.02 — Показать/Скрыть</title>
+    <title>WEB.HW.04.02 — Система голосования</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <h1>Показать / Скрыть</h1>
-        <p class="subtitle">Домашняя работа WEB.HW.03.02</p>
+        <h1>Интерактивная система голосования</h1>
+        <p class="subtitle">Домашняя работа WEB.HW.04.02</p>
     </header>
 
     <div class="section-aliceblue">
@@ -18,7 +18,7 @@
             <div class="row g-4">
                 <div class="col-lg-12">
                     <div class="block block-blue">
-                        <p>Три абзаца с классом <code>.text-block</code>, у каждого своя кнопка. Плюс общая кнопка «Показать/Скрыть всё», которая переключает все три и меняет свой текст в зависимости от состояния.</p>
+                        <p>Динамический список людей. При клике по строке с именем увеличивается счётчик голосов. Через поле ввода можно добавить новых участников — с ними можно голосовать так же.</p>
                     </div>
                 </div>
             </div>
@@ -32,22 +32,14 @@
                 <div class="col-lg-12">
                     <div class="block block-green">
 
-                        <button id="globalBtn" class="my-button">Скрыть всё</button>
+                        <div id="message">Голосование</div>
 
-                        <div class="text-item">
-                            <p class="text-block">МНЕ</p>
-                            <button class="toggle-btn my-button" data-target="0">Скрыть</button>
+                        <div>
+                            <input type="text" id="addFriend" placeholder="Имя участника">
+                            <input type="button" id="addNew" value="Добавить друга">
                         </div>
 
-                        <div class="text-item">
-                            <p class="text-block">НУЖЕН</p>
-                            <button class="toggle-btn my-button" data-target="1">Скрыть</button>
-                        </div>
-
-                        <div class="text-item">
-                            <p class="text-block">ЗАЧЕТ</p>
-                            <button class="toggle-btn my-button" data-target="2">Скрыть</button>
-                        </div>
+                        <table id="output"></table>
 
                     </div>
                 </div>
@@ -73,6 +65,6 @@
         <p>2026 · Иван · Прикладная информатика в экономике</p>
     </footer>
 
-    <script src="js/hw_03.02.js"></script>
+    <script src="js/hw_04.02.js"></script>
 </body>
 </html>
