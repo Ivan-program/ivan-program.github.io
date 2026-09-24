@@ -94,7 +94,7 @@ body::before {
 }
 .block {
     background-color: red;      /* ФОН КАРТОЧКИ */
-    border: 2px solid red;      /* ОБЩАЯ РАМКА КАРТОЧКИ */
+    border: 2px solid black;      /* ОБЩАЯ РАМКА КАРТОЧКИ */
     padding: 20px;
     height: 100%;
 
