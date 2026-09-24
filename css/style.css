@@ -93,7 +93,7 @@ body::before {
     height: 100%;
 }
 .block {
-    background-color: red;      /* ФОН КАРТОЧКИ */
+    background-color: white;      /* ФОН КАРТОЧКИ */
     border: 2px solid black;      /* ОБЩАЯ РАМКА КАРТОЧКИ */
     padding: 20px;
     height: 100%;
