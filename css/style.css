@@ -115,7 +115,7 @@ body::before {
 /* --- цвет левой рамки карточки --- */
 
 .block-red {
-    border-left: 8px solid red;      /* СИНЯЯ ПОЛОСА СЛЕВА */
+    border-left: 8px solid red;      /* КРАСНАЯ ПОЛОСА СЛЕВА */
 }
 
 .block-blue {
